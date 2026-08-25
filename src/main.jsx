@@ -9,7 +9,7 @@ import { ThemeProvider } from './contexts/ThemeContext.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/smart-task-management">
       <ThemeProvider>
         <TaskProvider>
           <CategoryProvider>
