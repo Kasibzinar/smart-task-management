@@ -3,13 +3,13 @@ import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App.jsx';
 import { TaskProvider } from './contexts/TaskContext.jsx';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { CategoryProvider } from './contexts/CategoryContext.jsx';
 import { ThemeProvider } from './contexts/ThemeContext.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <HashRouter>
+    <BrowserRouter basename="/smart-task-management">
       <ThemeProvider>
         <TaskProvider>
           <CategoryProvider>
@@ -17,6 +17,6 @@ createRoot(document.getElementById('root')).render(
           </CategoryProvider>
         </TaskProvider>
       </ThemeProvider>
-    </HashRouter>
+    </BrowserRouter>
   </StrictMode>,
 );
