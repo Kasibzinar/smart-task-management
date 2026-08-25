@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <script>
@@ -9,9 +9,9 @@
       if (path.startsWith(repo)) {
         const route = path.slice(repo.length);
 
-        window.location.replace(
-          repo + '/?redirect=' + encodeURIComponent(route),
-        );
+        const redirectUrl = repo + '/?redirect=' + encodeURIComponent(route);
+
+        window.location.replace(redirectUrl);
       }
     </script>
   </head>

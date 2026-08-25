@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smart Task Management</title>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const redirect = params.get('redirect');
+
+      if (redirect) {
+        const base = '/smart-task-management';
+
+        window.history.replaceState(null, '', base + redirect);
+      }
+    </script>
     <script type="module" crossorigin src="/smart-task-management/assets/index-rschO9IW.js"></script>
     <link rel="stylesheet" crossorigin href="/smart-task-management/assets/index-CW4vGbev.css">
   </head>
